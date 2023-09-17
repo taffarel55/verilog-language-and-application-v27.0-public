@@ -1,0 +1,73 @@
+TOOL:	xrun	23.03-s001: Started on Sep 14, 2023 at 21:24:08 -03
+xrun: 23.03-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+file: rcvr.v
+	module worklib.rcvr:v
+		errors: 0, warnings: 0
+file: rcvr_test.v
+	module worklib.rcvr_test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		rcvr_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.rcvr:v <0x05fdedc9>
+			streams:   9, words:  4382
+		worklib.rcvr_test:v <0x1b042a71>
+			streams:   5, words: 12182
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              2       2
+		Registers:           17      17
+		Scalar wires:         6       -
+		Vectored wires:       1       -
+		Always blocks:        3       3
+		Initial blocks:       5       5
+		Pseudo assignments:   1       -
+	Writing initial simulation snapshot: worklib.rcvr_test:v
+Loading snapshot worklib.rcvr_test:v .................... Done
+xcelium> source /eda/cadence/installs_2022/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./rcvr_test.v, line = 22, pos = 12
+           Scope: rcvr_test
+            Time: 0 FS + 0
+
+Message sending:  I Love Verilog
+At time 35: Put character "I"
+At time 39: Got character "I"
+At time 77: Put character " "
+At time 95: Got character " "
+At time 117: Put character "L"
+At time 127: Got character "L"
+At time 153: Put character "o"
+At time 175: Got character "o"
+At time 193: Put character "v"
+At time 207: Got character "v"
+At time 231: Put character "e"
+At time 257: Got character "e"
+At time 275: Put character " "
+At time 297: Got character " "
+At time 309: Put character "V"
+At time 313: Got character "V"
+At time 349: Put character "e"
+At time 365: Got character "e"
+At time 391: Put character "r"
+At time 423: Got character "r"
+At time 425: Put character "i"
+At time 433: Got character "i"
+At time 459: Put character "l"
+At time 487: Got character "l"
+At time 495: Put character "o"
+At time 507: Got character "o"
+At time 537: Put character "g"
+At time 563: Got character "g"
+Message received: I Love Verilog
+TEST DONE
+Simulation complete via $finish(1) at time 563 NS + 0
+./rcvr_test.v:66       $finish;
+xcelium> exit
+TOOL:	xrun	23.03-s001: Exiting on Sep 14, 2023 at 21:24:09 -03  (total: 00:00:01)
