@@ -9,6 +9,11 @@ Verilog Language and Application v27.0
 
 [< Back to other cadence courses](https://github.com/taffarel55/CADEMICS)
 
+## 📦 Cloning course files (Restricted)
+
+```
+git submodule update --init
+```
 
 ![Xcelium](assets/xcelium.jpg)
 
@@ -66,9 +71,5 @@ We would like to thank the following people who contributed to this project:
     -->
   </tr>
 </table>
-
-## 📝 License
-
-This project is under license. See the [LICENSE](LICENSE) file for more details.
 
 [⬆ Back to top](#inicio)<br>
