@@ -1,0 +1,59 @@
+TOOL:	xrun	23.03-s001: Started on Sep 12, 2023 at 20:59:19 -03
+xrun: 23.03-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+file: ../../tutorial.v
+	module tutorial.inv1:v
+		errors: 0, warnings: 0
+	module tutorial.ivt1:v
+		errors: 0, warnings: 0
+		Caching library 'tutorial' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		lib_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CDN_flop:vg <0x262de891>
+			streams:   4, words:   779
+		worklib.dffrs:vg <0x475a0b07>
+			streams:   0, words:     0
+		worklib.CDN_latch:vg <0x037fc455>
+			streams:   4, words:   756
+		worklib.case_box:vg <0x584f91ca>
+			streams:   0, words:     0
+		worklib.priority7:vg <0x6828e169>
+			streams:   1, words:  1328
+		worklib.lib_test:v <0x4f6bde1f>
+			streams:  22, words: 29062
+		tutorial.inv1:v <0x29c1c393>
+			streams:   0, words:     0
+		tutorial.ivt1:v <0x60d9807f>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             28      12
+		Primitives:          56       5
+		Registers:           18      18
+		Scalar wires:        32       -
+		Expanded wires:      39      10
+		Always blocks:        2       2
+		Initial blocks:       8       8
+		Cont. assignments:    2       5
+		Pseudo assignments:  13       -
+	Writing initial simulation snapshot: worklib.lib_test:v
+Loading snapshot worklib.lib_test:v .................... Done
+xcelium> source /eda/cadence/installs_2022/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./lib_test.v, line = 35, pos = 12
+           Scope: lib_test
+            Time: 0 FS + 0
+
+TEST PASSED - DRIVER
+TEST PASSED - PRIORITY
+TEST PASSED - LATCH
+TEST PASSED - DFF
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun	23.03-s001: Exiting on Sep 12, 2023 at 20:59:21 -03  (total: 00:00:02)
