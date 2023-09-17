@@ -1,0 +1,3 @@
+[submodule "restricted-files"]
+	path = restricted-files
+	url = git@github.com:taffarel55/verilog-language-and-application-v27.0-private.git
